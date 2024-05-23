@@ -1,4 +1,42 @@
 ﻿@page
 @model Flota_Vehicular.Pages.Vehiculos.EditModel
 @{
+	ViewData["Title"] = "Edit";
 }
+
+<h1>Edit</h1>
+
+<h4>Vehiculo</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-sumary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" asp-for="Vehiculos.Id" />
+			<div class="form-group">
+				<label asp-fpr="Vehiculos.Id" class="control-label"></label>
+				<input asp-for="Vehiculos.Id" class="form-control" />
+				<span asp-validation-for="Vehiculos.Id" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Vehiculos.Id" class="control-label"></label>
+				<input asp-for="Vehiculos.Id" class="form-control" />
+				<span asp-validation-for="Vehiculos.Id" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Vehiculos.Id" class="control-label"></label>
+				<input asp-for="Vehiculos.Id" class="form-control" />
+				<span asp-validation-for="Vehiculos.Id" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Vehiculos.Id" class="control-label"></label>
+				<input asp-for="Vehiculos.Id" class="form-control" />
+				<span asp-validation-for="Vehiculos.Id" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="save" class="btn btn-success" />
+				<a asp-page="./Index" class="btn btn-primary">Back to List</a>
+			</div>
+		</form>
+	</div>
+</div>
