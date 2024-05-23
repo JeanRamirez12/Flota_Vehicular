@@ -19,7 +19,7 @@ namespace Flota_Vehicular.Pages.Conductores
 		}
 
 		[BindProperty]
-		public Conductor Conductor { get; set; } = default!;
+		public Registro_de_uso Conductor { get; set; } = default!;
 
 		public async Task<IActionResult> OnPostAsync()
 		{

@@ -1,0 +1,50 @@
+﻿@page
+@model Flota_Vehicular.Pages.Registro_de_usos.IndexModel
+@{
+}
+ ViewData["Title"] = "Index Users";
+}
+<h1>Index Users</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-success">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Registro_de_usos[0].Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Registro_de_usos[0].KilometrajeInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Registro_de_usos[0].KilometrajeFin)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Conductores)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KilometrajeInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KilometrajeFin)
+                </td>
+                <td>
+                    <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+                <td>
+                    <span></span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

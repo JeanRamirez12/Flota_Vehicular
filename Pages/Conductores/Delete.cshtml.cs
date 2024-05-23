@@ -15,7 +15,7 @@ namespace Flota_Vehicular.Pages.Conductores
 			}
 
 			[BindProperty]
-			public Conductor Conductor { get; set; }
+			public Registro_de_uso Conductor { get; set; }
 
 			public async Task<IActionResult> OnGetAsync(int? id)
 			{
