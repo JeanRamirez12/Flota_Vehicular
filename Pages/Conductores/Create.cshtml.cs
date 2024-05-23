@@ -19,7 +19,7 @@ namespace Flota_Vehicular.Pages.Conductores
 		}
 
 		[BindProperty]
-		public Registro_de_uso Conductor { get; set; } = default!;
+		public Conductor Conductor { get; set; } = default!;
 
 		public async Task<IActionResult> OnPostAsync()
 		{
@@ -34,4 +34,5 @@ namespace Flota_Vehicular.Pages.Conductores
 			return RedirectToPage("./Index");
 		}
 	}
-}
+
+  
