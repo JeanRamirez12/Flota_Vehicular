@@ -1,0 +1,34 @@
+﻿@page
+@model Flota_Vehicular.Pages.Asignaciones.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Asignacion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Asignaciones.FechaInicio" class="control-label"></label>
+                <input asp-for="Asignaciones.FechaInicio" class="form-control" />
+                <span asp-validation-for="Asignaciones.FechaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asignaciones.FechaFin" class="control-label"></label>
+                <input asp-for="Asignaciones.FechaFin" class="form-control" />
+                <span asp-validation-for="Asignaciones.FechaFin" class="text-danger"></span>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
