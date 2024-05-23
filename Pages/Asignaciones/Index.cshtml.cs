@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Flota_Vehicular.Pages.Asignaciones
 {
+	//index
     public class IndexModel : PageModel
     {
 		private readonly FlotavehicularContext _context;
