@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Flota_Vehicular.Pages.Conductores
 {
-    public class CreateModel : PageModel
-    {
+	public class CreateModel : PageModel
+	{
 		private readonly FlotavehicularContext _context;
 		public CreateModel(FlotavehicularContext context)
 		{
@@ -34,5 +34,6 @@ namespace Flota_Vehicular.Pages.Conductores
 			return RedirectToPage("./Index");
 		}
 	}
+}
 
   

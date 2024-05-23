@@ -1,4 +1,42 @@
 ﻿@page
 @model Flota_Vehicular.Pages.Registro_de_usos.CreateModel
 @{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Conductor</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Registro_de_uso.Fecha" class="control-label"></label>
+				<input asp-for="Registro_de_uso.Fecha" class="form-control" />
+				<span asp-validation-for="Registro_de_uso.Fecha" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Registro_de_uso.KilometrajeInicio" class="control-label"></label>
+				<input asp-for="Registro_de_uso.KilometrajeInicio" class="form-control" />
+				<span asp-validation-for="Registro_de_uso.KilometrajeInicio" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Registro_de_uso.KilometrajeFin" class="control-label"></label>
+				<input asp-for="Registro_de_uso.KilometrajeFin" class="form-control" />
+				<span asp-validation-for="Registro_de_uso.KilometrajeFin" class="text-danger"></span>
+			</div>
+			<div class="form-group mt-3">
+				<input type="submit" value="Create" class="btn-success" />
+				<a asp-page="Index" class="btn btn-primary">Back to List</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }
