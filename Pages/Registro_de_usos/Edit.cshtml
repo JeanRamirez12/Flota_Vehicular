@@ -1,0 +1,37 @@
+﻿@page
+@model Flota_Vehicular.Pages.Registro_de_usos.EditModel
+@{
+	ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Conductores</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-sumary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" asp-for="Registro_de_usos.Id" />
+			<div class="form-group">
+				<label asp-fpr="Registro_de_usos.Fecha" class="control-label"></label>
+				<input asp-for="Registro_de_usos.Fecha" class="form-control" />
+				<span asp-validation-for="Registro_de_usos.Fecha" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Registro_de_usos.KilometrajeInicio" class="control-label"></label>
+				<input asp-for="Registro_de_usos.KilometrajeInicio" class="form-control" />
+				<span asp-validation-for="Registro_de_usos.KilometrajeInicio" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Registro_de_usos.KilometrajeFin" class="control-label"></label>
+				<input asp-for="Registro_de_usos.KilometrajeFin" class="form-control" />
+				<span asp-validation-for="Registro_de_usos.KilometrajeFin" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="save" class="btn btn-success" />
+				<a asp-page="./Index" class="btn btn-primary">Back to List</a>
+			</div>
+		</form>
+	</div>
+</div>

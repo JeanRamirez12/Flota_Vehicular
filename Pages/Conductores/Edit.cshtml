@@ -1,0 +1,47 @@
+﻿@page
+@model Flota_Vehicular.Pages.Conductores.EditModel
+@{
+	ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Conductores</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-sumary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" asp-for="Conductores.Id" />
+			<div class="form-group">
+				<label asp-fpr="Conductores.Name" class="control-label"></label>
+				<input asp-for="Conductores.Name" class="form-control" />
+				<span asp-validation-for="Conductores.Name" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Conductores.Apellido" class="control-label"></label>
+				<input asp-for="Conductores.Apellido" class="form-control" />
+				<span asp-validation-for="Conductores.Apellido" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Conductores.Licencia" class="control-label"></label>
+				<input asp-for="Conductores.Licencia" class="form-control" />
+				<span asp-validation-for="Conductores.Licencia" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Conductores.Telefono" class="control-label"></label>
+				<input asp-for="Conductores.Telefono" class="form-control" />
+				<span asp-validation-for="Conductores.Telefono" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Conductores.Direccion" class="control-label"></label>
+				<input asp-for="Conductores.Direccion" class="form-control" />
+				<span asp-validation-for="Conductores.Direccion" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="save" class="btn btn-success" />
+				<a asp-page="./Index" class="btn btn-primary">Back to List</a>
+			</div>
+		</form>
+	</div>
+</div>

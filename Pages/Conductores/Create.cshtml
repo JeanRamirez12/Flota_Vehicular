@@ -1,0 +1,52 @@
+﻿@page
+@model Flota_Vehicular.Pages.Conductores.CreateModel
+@{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Conductor</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Conductor.Name" class="control-label"></label>
+				<input asp-for="Conductor.Name" class="form-control" />
+				<span asp-validation-for="Conductor.Name" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Conductor.Apellido" class="control-label"></label>
+				<input asp-for="Conductor.Apellido" class="form-control" />
+				<span asp-validation-for="Conductor.Apellido" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Conductor.Licencia" class="control-label"></label>
+				<input asp-for="Conductor.Licencia" class="form-control" />
+				<span asp-validation-for="Conductor.Licencia" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Conductor.Telefono" class="control-label"></label>
+				<input asp-for="Conductor.Telefono" class="form-control" />
+				<span asp-validation-for="Conductor.Telefono" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Conductor.Direccion" class="control-label"></label>
+				<input asp-for="Conductor.Direccion" class="form-control" />
+				<span asp-validation-for="Conductor.Direccion" class="text-danger"></span>
+			</div>
+			<div class="form-group mt-3">
+				<input type="submit" value="Create" class="btn-success" />
+				<a asp-page="Index" class="btn btn-primary">Back to List</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
