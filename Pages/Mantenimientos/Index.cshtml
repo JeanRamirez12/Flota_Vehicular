@@ -1,0 +1,50 @@
+﻿@page
+@model Flota_Vehicular.Pages.Mantenimientos.IndexModel
+@{
+}
+ ViewData["Title"] = "Index Users";
+}
+<h1>Index Users</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-success">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mantenimientos[0].FechaMantenimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mantenimientos[0].Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mantenimientos[0].Costo)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Mantenimientos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaMantenimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Costo)
+                </td>
+                <td>
+                    <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+                <td>
+                    <span></span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
