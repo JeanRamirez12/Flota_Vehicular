@@ -24,10 +24,10 @@ namespace Flota_Vehicular.Pages.Registro_de_usos
 				return NotFound();
 			}
 
-			var category = await _context.Registro_de_usos.FirstOrDefaultAsync(m => m.Id == id);
+			var Registro_de_uso = await _context.Registro_de_usos.FirstOrDefaultAsync(m => m.Id == id);
 
 
-			if (category == null)
+			if (Registro_de_uso == null)
 			{
 				return NotFound();
 			}

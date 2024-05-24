@@ -24,10 +24,10 @@ namespace Flota_Vehicular.Pages.Conductores
 					return NotFound();
 				}
 
-				var category = await _context.Conductores.FirstOrDefaultAsync(m => m.Id == id);
+				var Conductor = await _context.Conductores.FirstOrDefaultAsync(m => m.Id == id);
 
 
-				if (category == null)
+				if (Conductor == null)
 				{
 					return NotFound();
 				}
